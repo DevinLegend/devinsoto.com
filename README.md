@@ -2,6 +2,8 @@
 
 A personal blog built with Eleventy, hosted on GitHub Pages.
 
+Last updated: 2025-10-09
+
 ## Setup
 
 1. Install dependencies: `npm install`
