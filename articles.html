@@ -36,7 +36,7 @@
             {% for post in collections.posts | reverse %}
             <article>
                 <h4>{{ post.data.title }}</h4>
-                <p>{{ post.data.excerpt or post.templateContent | excerpt }}</p>
+                                <p>{{ post.data.excerpt or post.templateContent | truncate: 150 }}</p>
                 <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
                 <a href="{{ post.url }}">Read More</a> |
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.devinsoto.com{{ post.url }}" target="_blank">Share on LinkedIn</a> |

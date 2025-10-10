@@ -1,0 +1,86 @@
+<h1>Devin Soto's Blog</h1>
+<p>A personal blog built with Eleventy, hosted on GitHub Pages.</p>
+<p>Last updated: 2025-10-09</p>
+<h2>Setup</h2>
+<ol>
+<li>Install dependencies: <code>npm install</code></li>
+<li>Build locally: <code>npm run build</code></li>
+<li>Serve locally: <code>npm run serve</code></li>
+</ol>
+<h2>Posting</h2>
+<p>To add a new article:</p>
+<ol>
+<li>Go to the <code>posts/</code> folder in the repo.</li>
+<li>Click &quot;Add file&quot; &gt; &quot;Create new file&quot;.</li>
+<li>Name it <code>your-title.md</code>.</li>
+<li>Add frontmatter at the top:</li>
+</ol>
+<pre><code>---
+layout: false
+title: &quot;Your Article Title&quot;
+date: 2025-10-09
+excerpt: &quot;Short summary of the article.&quot;
+---
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt; - Devin Soto's Hub&lt;/title&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Playfair+Display:wght@400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/resources/styles.css&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#0b261d&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot; - Devin Soto's Blog&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;https://www.devinsoto.com/README/&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot; © Devin Soto.&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div class=&quot;header-content&quot;&gt;
+            &lt;h1&gt;Devin Soto's Hub&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/articles.html&quot;&gt;Articles&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section class=&quot;hero&quot;&gt;
+            &lt;h2&gt;&lt;/h2&gt;
+            &lt;p&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section class=&quot;panel&quot;&gt;
+            &lt;!-- Your article content here in Markdown --&gt;
+            # Your Heading
+
+            Your content...
+
+            © 2025 Devin Soto. All rights reserved.
+            &lt;div&gt;
+                &lt;a href=&quot;https://www.linkedin.com/sharing/share-offsite/?url=https://www.devinsoto.com/README/&quot; target=&quot;_blank&quot;&gt;Share on LinkedIn&lt;/a&gt; |
+                &lt;a href=&quot;https://x.com/intent/tweet?url=https://www.devinsoto.com/README/&amp;text=&quot; target=&quot;_blank&quot;&gt;Share on X&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 Devin Soto. All Rights Reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="5">
+<li>Write your article below the HTML.</li>
+<li>Commit the file—GitHub Actions will build and deploy automatically.</li>
+</ol>
+<h2>Deployment</h2>
+<p>Pushed to <code>main</code> triggers GitHub Actions to build with Eleventy and deploy to Pages.</p>
+<p>Live at: https://devinlegend.github.io/Resume/</p>
+<p>© 2025 Devin Soto. All rights reserved.</p>
