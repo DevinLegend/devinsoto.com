@@ -3,48 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devin Soto's Hub</title>
+    <title>Devin Soto — Developer, Designer, Builder</title>
+    <meta name="description" content="Personal website of Devin Soto. Web design services, project showcases, and more.">
+    <meta name="theme-color" content="#0b1f18">
+    <meta property="og:title" content="Devin Soto — Developer, Designer, Builder">
+    <meta property="og:description" content="Web design, development, and digital services by Devin Soto.">
+    <meta property="og:url" content="https://devinsoto.com">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/resources/styles.css">
-    <meta name="theme-color" content="#0b261d">
-    <meta property="og:title" content="Devin Soto's Personal Website">
-    <meta property="og:description" content="Tech builds, AI insights, and creative writing by Devin Soto">
-    <meta property="og:url" content="https://www.devinsoto.com">
-    <meta name="description" content="A space for software engineering articles, AI explorations, project showcases, and leisure writing. © Devin Soto.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/articles.html">Articles</a></li>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">Devin<span>Soto</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn btn-sm">Get in Touch</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Welcome to Devin Soto's Blog</h2>
-            <p>Sharing thoughts on tech, AI, and writing. All content © Devin Soto.</p>
-        </section>
-        
-        <section class="recent-articles">
-            <h3>Latest Posts</h3>
-            {% for post in collections.posts | reverse %}
-            <article>
-                <h4>{{ post.data.title }}</h4>
-                <p>{{ post.data.excerpt or post.templateContent | truncate: 150 }}</p>
-                <a href="{{ post.url }}">Read More</a> |
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.devinsoto.com{{ post.url }}" target="_blank">Share on LinkedIn</a> |
-                <a href="https://x.com/intent/tweet?url=https://www.devinsoto.com{{ post.url }}&text={{ post.data.title }}" target="_blank">Share on X</a>
-            </article>
-            {% endfor %}
-        </section>
-    </main>
-    
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <p class="eyebrow">Hello, I'm Devin Soto</p>
+                <h1>I design &amp; build<br><em>digital experiences.</em></h1>
+                <p class="subtitle">Full-stack developer and designer helping businesses launch polished, high-converting websites and digital products.</p>
+                <div class="hero-ctas">
+                    <a href="#services" class="btn btn-primary">View Services</a>
+                    <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        @DevinSoto
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <span class="card-tag">Available for projects</span>
+                    <p>Web Design · Development · Digital Strategy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <p class="eyebrow">What I Offer</p>
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Clean, modern websites that look great on every device. From concept to launch, I handle design and development.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Custom-built sites and web apps with clean code, fast load times, and SEO best practices baked in.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20V10M6 20V4M18 20v-4"/></svg>
+                    </div>
+                    <h3>Digital Strategy</h3>
+                    <p>Need a plan? I help with positioning, content strategy, and building an online presence that converts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-placeholder">
+                        <span>Coming Soon</span>
+                    </div>
+                    <h3>Project One</h3>
+                    <p>Details about this project will be added here.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-placeholder">
+                        <span>Coming Soon</span>
+                    </div>
+                    <h3>Project Two</h3>
+                    <p>Details about this project will be added here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <p class="eyebrow">About Me</p>
+                <h2>Devin Soto</h2>
+                <p>I'm a full-stack developer and designer based in San Diego. I've built tools at Charter Communications, freelanced IT and development, and studied at Harvard CS50x and Codecademy's Full-Stack program.</p>
+                <p>I'm passionate about building things that look great, work fast, and solve real problems. When I'm not coding, you'll find me writing, exploring AI, or working on my next business idea.</p>
+                <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Follow me on X
+                </a>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years in Tech</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container contact-inner">
+            <p class="eyebrow">Let's Work Together</p>
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">Have a project in mind? Let's talk about how I can help bring it to life.</p>
+            <div class="contact-ctas">
+                <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    DM me on X
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Devin Soto. All Rights Reserved.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2025 Devin Soto. All rights reserved.</p>
+            <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="footer-x">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                @DevinSoto
+            </a>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
