@@ -1,442 +1,231 @@
-/* Custom styling to complement Bootstrap */
+/* ===== DevinSoto.com — Personal Hub ===== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    /* Define color scheme */
-    --primary-color: #228B22; /* Forest Green for primary elements */
-    --secondary-color: #D3D3D3; /* Soft Grey for secondary elements */
-    --background-color: #FFFFFF; /* Clean White for background */
-    --text-color: #282828; /* Dark Grey for text */
+    --bg: #0a0a0a;
+    --surface: #151515;
+    --border: #2a2a2a;
+    --text: #f0f0f0;
+    --text-muted: #888;
+    --accent-x: #1d9bf0;
+    --accent-app: #34c759;
+    --accent-ww: #a78bfa;
+    --radius: 16px;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-    padding-top: [NavbarHeight]px; /* Replace [NavbarHeight] with the actual height of your navbar */
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* NAVBAR STYLES */
-/* Logo and navbar customization */
-.navbar-brand img {
-    height: 70px; /* Adjust logo size */
+/* ===== Hub Container ===== */
+.hub {
+    width: 100%;
+    max-width: 480px;
+    padding: 60px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    backdrop-filter: saturate(180%) blur(20px); /* Subtle blur effect for behind navbar content */
+/* ===== Identity ===== */
+.hub__identity {
+    text-align: center;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.7); /* Darker text for better contrast */
+.hub__name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    animation: fadeUp 0.6s ease-out both;
+}
+
+.hub__tagline {
+    margin-top: 12px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    animation: fadeUp 0.6s 0.15s ease-out both;
+}
+
+/* ===== Link Cards ===== */
+.hub__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: fadeUp 0.6s 0.3s ease-out both;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
     text-decoration: none;
-    position: relative;
-    padding: 8px 15px; /* Adjust padding for better alignment and spacing */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    cursor: pointer;
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus {
-    color: var(--primary-color); /* Even darker on hover/focus */
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.navbar-light .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.5s ease-in-out; /* Transition for the underline effect */
+/* Per-card accent on hover */
+.link-card--x:hover {
+    border-color: var(--accent-x);
+    box-shadow: 0 8px 30px rgba(29, 155, 240, 0.15);
 }
 
-.navbar-light .navbar-nav .nav-link:hover::after,
-.navbar-light .navbar-nav .nav-link:focus::after {
-    width: 100%; /* Full width underline on hover/focus */
+.link-card--app:hover {
+    border-color: var(--accent-app);
+    box-shadow: 0 8px 30px rgba(52, 199, 89, 0.15);
 }
 
-.navbar-nav {
-    justify-content: center; /* Centers the nav items within the navigation bar */
+.link-card--ww:hover {
+    border-color: var(--accent-ww);
+    box-shadow: 0 8px 30px rgba(167, 139, 250, 0.15);
 }
 
-.navbar-nav li {
-    margin: 0 1rem; /* Adds spacing on both sides of each item */
+/* Icon */
+.link-card__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition);
 }
 
-@media (min-width: 992px) {
-    .navbar-nav {
-        transform: translateX(-20%); /* Shifts the navigation items slightly to the left */
-    }
+.link-card--x .link-card__icon {
+    background: rgba(29, 155, 240, 0.12);
+    color: var(--accent-x);
 }
 
-
-
-/* Ensuring last item does not have extra spacing on the right */
-
-
-
-            /*  -----------  HEADER PAGE STYLES!! -------- */
-.header-text {
-    padding: 10px 10px; /* Ample padding around the text */
-    border-radius: 8px; /* Rounded corners for the background */
-    display: inline-block; /* Makes the background fit the text size */
-    color: var(--primary-color); /* Forest Green color for the text */
-    /* Ensures vertical centering in a flexible way */
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    text-align: center; /* Centers the text inside the block */
+.link-card--app .link-card__icon {
+    background: rgba(52, 199, 89, 0.12);
+    color: var(--accent-app);
 }
 
-.header-background {
-    position: relative; /* Relative position to base absolute positioning of text */
-    text-align: center; /* Aligns the text block at the center horizontally */
-    padding: 100px 0; /* Top and bottom padding */
-    background: url('/Resources/Images/backgroundweb.png') no-repeat center center; /* Path to your background image */
-    background-size: 50%; /* Ensures the background covers the entire header */
-    min-height: 100vh; /* Full viewport height */
+.link-card--ww .link-card__icon {
+    background: rgba(167, 139, 250, 0.12);
+    color: var(--accent-ww);
 }
 
-@media (max-width: 768px) {
-    .header-background {
-        background-size: 350px; /* Keeps the background image covering the area without resizing too small */
-        background-attachment: scroll; /* Prevents fixed background on mobile for better performance */
-    }
+/* Text */
+.link-card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
 }
 
-
-.header-text h1 {
-    color: black;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideIn 1.5s ease-out forwards;
+.link-card__title {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.header-text h1 span{
-    color: var(--primary-color);
+.link-card__sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-.header-text h3 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideIn 1.5s ease-out forwards;
+/* Arrow */
+.link-card__arrow {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: transform var(--transition), color var(--transition);
 }
 
-@keyframes slideIn {
-    0% {
+.link-card:hover .link-card__arrow {
+    transform: translateX(4px);
+    color: var(--text);
+}
+
+/* ===== Footer ===== */
+.hub__footer {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp {
+    from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(16px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .header-background {
-        background-attachment: fixed; /* Ensures the parallax effect */
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+    .hub {
+        padding: 48px 20px 32px;
+        gap: 36px;
+    }
+
+    .hub__name {
+        font-size: 2rem;
+    }
+
+    .link-card {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+
+    .link-card__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link-card__icon svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
-/* Responsive design tweaks for smaller screens */
-@media (max-width: 768px) {
-    .header-text h1 {
-        font-size: 1.5rem; /* Larger font size for larger screens */
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
-    .header-text h3 {
-        font-size: 1.0rem; /* Larger font size for larger screens */
-    }
-
-    .navbar-brand img {
-        height: 50px; /* Smaller logo on mobile */
-    }
-
-    /* More responsive adjustments as needed */
-}
-
-
-
-/* About section */
-#about {
-    padding: 40px 0;
-}
-
-#about .img-fluid {
-    border-radius: 15px; /* Soften the edges of about section image */
-    max-width: 100%;
-}
-
-#skills p {
-    margin-bottom: 15px;
-    line-height: 1.6; /* Improves readability */
-}
-
-#skills span {
-    font-weight: bold; /* Emphasizes section headers or important titles */
-    color: var(--primary-color); /* Using a variable for easy theme changes */
-}
-
-#skills ul {
-    list-style-type: none; /* Removes bullet points for a cleaner look */
-    padding: 0;
-}
-
-#skills li {
-    display: inline-block; /* Displays icons inline with some spacing */
-    margin-right: 10px;
-    font-size: 24px; /* Larger icons for better visibility */
-}
-
-.fa-brands {
-    color: var(--primary-color); /* Optionally, you can set a secondary color for icons */
-}
-
-.fa-solid {
-    color: var(--primary-color); /* Optionally, you can set a secondary color for icons */
-}
-
-#education span {
-    font-weight: bold; /* Emphasizes section headers or important titles */
-    color: var(--primary-color); /* Using a variable for easy theme changes */
-}
-
-#experience span {
-    font-weight: bold; /* Emphasizes section headers or important titles */
-    color: var(--primary-color); /* Using a variable for easy theme changes */
-}
-
-#hobbies span {
-    font-weight: bold; /* Emphasizes section headers or important titles */
-    color: var(--primary-color); /* Using a variable for easy theme changes */
-}
-
-@media (max-width: 768px) {
-    #skills li {
-        display: block; /* Stack icons vertically on smaller screens */
-        margin-bottom: 10px;
-    }
-}
-
-.about-tabs .nav-link {
-    color: #228B22; /* Primary color */
-    border: 1px solid transparent; /* Remove borders or make them transparent if not needed */
-}
-
-/* Hover state for nav-link within the about section */
-.about-tabs .nav-link:hover {
-    color: #000000; /* Black for hover */
-    background-color: #e9ecef; /* Light gray background on hover */
-}
-
-/* Active state for nav-link using Bootstrap’s active class within the about section */
-.about-tabs .nav-link.active {
-    color: #ffffff; /* White text for active */
-    background-color: #000000; /* Black background for active */
-}
-
-
-
-
-                    /* ------------------------Services section---------------------------------- */
-
-/* Services Section Styling */
-#services .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-#services .col-md-4 {
-    display: flex;
-    flex: 1 0 33.333333%; /* Adjusts to take one-third of the space */
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.service-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, transform 0.5s ease; /* Smooth transitions for background, text, border color, and transform changes */
-    border: 1px solid var(--primary-color);
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-}
-
-.service-item:hover {
-    background-color: var(--secondary-color);
-    color: black;
-    transform: translateY(-10px) scale(1.05);
-}
-
-.service-item a {
-    text-decoration: none;
-    color: inherit; /* Ensures the anchor tag inherits the text color from the service-item */
-}
-
-.btn-outline-success {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for button background and text color */
-}
-
-.btn-outline-success:hover {
-    background-color: var(--primary-color); /* Background color changes to primary color on hover */
-    color: #ffffff; /* Text color changes to white on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #services .col-md-4 {
-        flex: 1 0 100%; /* Each service item takes full width on smaller screens */
-    }
-}
-
-
-
-                        /* ---------------------Portfolio Grid Setup--------------------- */
-#portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    height: 300px; /* Adjust height as necessary */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out; /* Enhanced to include all properties */
-    position: relative;
-    display: flex;
-    align-items: flex-end; /* Aligns the text content to the bottom */
-}
-
-.portfolio-layer {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 191, 99, 0.8), rgba(0, 0, 0, 0.8)); /* Gradient from green at bottom to black at top */
-    color: #ffffff; /* Ensures text is visible on potentially dark images */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(10%); /* Starts slightly below for a sliding effect */
-    transition: all 0.5s ease; /* Smooth transition effects */
-}
-
-.portfolio-item:hover .portfolio-layer {
-    opacity: 1; /* Fully visible on hover */
-    transform: translateY(0); /* Reset to initial position */
-    background: linear-gradient(to top, rgba(0, 191, 99, 0.6), rgba(0, 0, 0, 0.6)); /* Lighter gradient on hover for dynamic effect */
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05); /* Slightly increase the size to draw attention */
-}
-
-.portfolio-item h3, .portfolio-item p {
-    margin: 0; /* Removes margin for a clean look */
-    padding: 5px; /* Small padding to prevent text from touching the edges */
-}
-
-.portfolio-item a {
-    margin-top: 20px;
-    background-color: var(--primary-color); /* Primary color for the button */
-    color: var(--background-color); /* Text color for the button */
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* Smooth transition for button hover */
-}
-
-.portfolio-item a:hover {
-    background-color: #000; /* Changes background to black on hover */
-    color: #fff; /* Ensures the text color is white for better visibility */
-}
-
-/* Utility classes for colors and backgrounds */
-.bg-primary {
-    background-color: var(--primary-color) !important;
-}
-
-.text-primary {
-    color: var(--primary-color) !important;
-}
-
-
-
-                        /* ---------------- CONTACT SECTION-------------------- */
-
-/* Basic styles for Contact section */
-#contact .container {
-    text-align: center; /* Center text by default */
-}
-
-#contact .col-md-6 {
-    margin-bottom: 20px; /* Ensure spacing between sections */
-}
-
-.social-icons a {
-    width: 100%; /* Full width for buttons on smaller screens */
-    margin-bottom: 10px; /* Space between buttons */
-}
-
-/* Centering and styling the social icons container */
-.social-icons {
-    display: flex;
-    justify-content: center; /* Center icons horizontally */
-    padding: 0;
-    list-style: none; /* Remove list styling */
-    gap: 10px; /* Space between icons */
-}
-
-.social-icons a {
-    width: 40px; /* Set a fixed width for each icon */
-    height: 40px; /* Set a fixed height for each icon */
-    display: flex; /* Enable flexbox for centering */
-    align-items: center; /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
-    background-color: #f8f9fa; /* Light background for the icons */
-    border-radius: 50%; /* Make the icons circular */
-    color: #228B22; /* Primary color for icons */
-    font-size: 20px; /* Adjust icon size as needed */
-    text-decoration: none; /* Remove underline from links */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-}
-
-.social-icons a:hover {
-    background-color: var(--secondary-color); /* Change background on hover */
-    color: #fff; /* Change icon color on hover */
-}
-
-/* Responsive adjustments for social icons on smaller screens */
-@media (max-width: 768px) {
-    .social-icons {
-        justify-content: center; /* Evenly space icons across available space */
-        margin-top: 20px; /* Add some space above the icons */
-    }
-}
-
-                            /* Footer Styles */
-footer {
-    text-align: center; /* Ensures text is centered */
-    background-color: white; /* Keeps background white or change as per theme */
-    padding: 20px 0; /* Consistent padding */
-    border-top: 1px solid #eaeaea; /* Adds a subtle border for definition */
-}
-
-.copywrite {
-    color: #707070; /* Ensures good readability */
-    font-size: 16px; /* Keeps text reasonably sized */
 }

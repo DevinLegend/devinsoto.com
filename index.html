@@ -3,275 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devin Soto's professional full stack engineering portfolio showcasing skills, services, and past projects. Contact for collaborations or opportunities.">
-    <title>Devin Soto's Resume Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Resources/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Devin Soto — Engineer, Builder, Creator. Find me on X, check out my app, or visit my web agency.">
+    <title>Devin Soto</title>
+    <link rel="canonical" href="https://devinsoto.com/">
+    <meta property="og:title" content="Devin Soto">
+    <meta property="og:description" content="Engineer, Builder, Creator. Links to everything I'm working on.">
+    <meta property="og:url" content="https://devinsoto.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@DevinSoto">
+    <meta name="twitter:title" content="Devin Soto">
+    <meta name="twitter:description" content="Engineer, Builder, Creator.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-                    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#header">
-                    <img src="/Resources/Images/Logo1.png" alt="Devin Logo" class="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#header">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-                    <!-- Initial header and background -->
-    <div id="header" class="header-background">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center justify-content-center">
-                <div class="col-12 col-md-8 text-center">
-                    <div class="header-text">
-                        <h1>Hi, I'm <span>Devin</span></h1>
-                        <h3>FULL STACK ENGINEER</h3>
-                    </div>
-                </div>
-            </div>
+    <main class="hub">
+        <!-- Identity -->
+        <div class="hub__identity">
+            <h1 class="hub__name">Devin Soto</h1>
+            <p class="hub__tagline">Engineer · Builder · Creator</p>
         </div>
-    </div>
 
-                        <!-- ABOUT -->
-    <div id="about" class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h2 class="sub-title mb-3" style="color: #228B22;">About Me</h2>
-                    <p>I'm not just a coder; I'm a problem solver, driven and passionate about leveraging technology 
-                    to create innovative digital experiences that people truly enjoy using.
-                    <br><br>
-                    "The man who loves walking, will walk further than the man who loves the destination" - Lao Tzu</p>
-    
-                    <!-- Tab Navigation -->
-                    <ul class="nav nav-tabs justify-content-center about-tabs" id="aboutTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="true">Skills</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education">Education</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience">Experience</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="hobbies-tab" data-bs-toggle="tab" data-bs-target="#hobbies" type="button" role="tab" aria-controls="hobbies">Hobbies</button>
-                        </li>
-                    </ul>
-    
-                    <!-- Tab Content -->
-                    <div class="tab-content" id="aboutTabsContent">
-                        <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-                            <p><span>Full Stack Engineer</span></p>
-                            <p>
-                                <strong>Languages:</strong> <br> HTML, CSS, JavaScript, Python, C, SQL, TypeScript
-                            </p>
-                            <p>
-                                <strong>Technologies:</strong><br> Flask, PostgreSQL, SQLite, Node.js, Express.js, React, Redux
-                            </p>
-                            <p>
-                                <strong>Tools:</strong><br> Bootstrap, Version Control (Git/Github)
-                            </p>
-                            <ul>
-                                <!-- Icons -->
-                                <li>
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-js"></i>
-                                    <i class="fa-brands fa-python"></i>
-                                    <i class="fa-brands fa-git"></i>
-                                    <i class="fa-brands fa-github"></i>
-                                    <i class="fa-brands fa-react"></i>
-                                    <i class="fa-brands fa-wordpress"></i>
-                                    <i class="fa-brands fa-bootstrap"></i>
-                                    <i class="fa-brands fa-node-js"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
-                            <p><span>Education and Certifications:</span></p>
-                            <p><strong>CS50x:</strong> Computer Science - Harvard</p>
-                            <p><strong>Full-Stack Engineering:</strong> Codecademy</p>
-                            <p><strong>Front-End Engineering:</strong> Codecademy</p>
-                            <p><strong>JavaScript:</strong> Codecademy</p>
-                            <p><strong>TypeScript:</strong> Codecademy</p>
-                            <p><strong>Bootstrap:</strong> Codecademy</p>
-                            <!-- More items -->
-                        </div>
-                        
-                        <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-                            <p><span>Work Experience:</span></p>
-                            <p><strong>Sales Associate at Honda, Chula Vista, CA</strong> (2022 – Present) <br>
-                                Generated over $1M in vehicle sales by developing and implementing effective sales strategies. <br>
-                                Enhanced team performance through the mentorship and training of new sales associates.
-                            </p>
-                        
-                            <p><strong>Business Office Associate/Customer Specialist at CarMax, Pleasanton, CA</strong> (2021 – 2022) <br> 
-                                Promoted within four months due to exceptional sales and customer service achievements. <br>
-                                Processed over 150 vehicle transactions, significantly contributing to the store's operational accuracy.
-                            </p>
-                            <p>Additional experience as a Park Ranger at theCity of Chula Vista</p>
-                        </div>                                                                    
+        <!-- 3 Link Cards -->
+        <div class="hub__links">
 
-                        <div class="tab-pane fade" id="hobbies" role="tabpanel" aria-labelledby="hobbies-tab">
-                            <p><span>Hobbies:</span></p>
-                            
-                            <p><strong>Brazilian Jiu Jitsu - Blue Belt</strong></p>
-                            <p>I cherish Brazilian Jiu Jitsu for its simultaneous engagement of mind and body. It's not just about physical strength; it's about mental resilience and discipline. Training in this martial art means learning to handle high-pressure situations with grace and strategic thinking.</p>
-                        
-                            <p><strong>Writing - Published Author</strong></p>
-                            <p>As the author of "Awaken The Legend," I express my zeal for personal development. Writing is a journey akin to engineering, where development and growth are paramount—whether it's improving oneself, crafting narratives, or coding.</p>
-                        
-                            <p><strong>Front-End Engineering</strong></p>
-                            <p>Coding in HTML, CSS, and JavaScript allows me to blend logic with creativity, turning the digital canvas into functional and aesthetically pleasing experiences. Committed to lifelong learning, I aim to refine my skills continually and excel as a full-stack engineer.</p>
-                        </div>                        
-
-                    </div>
+            <!-- X / Twitter -->
+            <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="link-card link-card--x" aria-label="Follow Devin on X">
+                <div class="link-card__icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
                 </div>
-            </div>
+                <div class="link-card__text">
+                    <span class="link-card__title">Follow me on X</span>
+                    <span class="link-card__sub">@DevinSoto</span>
+                </div>
+                <span class="link-card__arrow">→</span>
+            </a>
+
+            <!-- App Store — New Year Goals -->
+            <a href="https://apps.apple.com/us/app/new-year-goals/id6756251661" target="_blank" rel="noopener" class="link-card link-card--app" aria-label="Download New Year Goals on the App Store">
+                <div class="link-card__icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                </div>
+                <div class="link-card__text">
+                    <span class="link-card__title">New Year Goals</span>
+                    <span class="link-card__sub">Download on the App Store (iOS only)</span>
+                </div>
+                <span class="link-card__arrow">→</span>
+            </a>
+
+            <!-- WebsitesWW.com -->
+            <a href="https://websitesww.com" target="_blank" rel="noopener" class="link-card link-card--ww" aria-label="Visit WebsitesWW.com">
+                <div class="link-card__icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+                    </svg>
+                </div>
+                <div class="link-card__text">
+                    <span class="link-card__title">WebsitesWW.com</span>
+                    <span class="link-card__sub">Need a website? I build them.</span>
+                </div>
+                <span class="link-card__arrow">→</span>
+            </a>
+
         </div>
-    </div>
-                                    
-                    <!-- SERVICES TAB  -->
-    <div id="services" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="sub-title text-center mb-5" style="color: #228B22;">My Services</h2>
-            <div class="row">
-                <!-- Service 1: Full-Stack Web Development -->
-                <div class="col-md-4 text-center mb-4">
-                    <div class="service-item p-3 shadow-sm">
-                        <i class="fa-solid fa-laptop-code fa-beat fa-3x"></i>
-                        <h3>Full-Stack Web Development</h3>
-                        <p>Develop comprehensive web solutions encompassing both client and server-side technologies, tailored to meet business needs.</p>
-                        <a class="btn btn-outline-success" href="#portfolio">Learn more</a>
-                    </div>
-                </div>
-                <!-- Service 2: Financial Data Automation -->
-                <div class="col-md-4 text-center mb-4">
-                    <div class="service-item p-3 shadow-sm">
-                        <i class="fa-brands fa-react fa-spin fa-3x"></i>
-                        <h3>Front-End Development</h3>
-                        <p>Design and develop engaging, high-performance user interfaces tailored to enhance user experience and interaction.</p>
-                        <a class="btn btn-outline-success" href="#portfolio">Learn more</a>
-                    </div>
-                </div>
-                <!-- Service 3: Custom API Development -->
-                <div class="col-md-4 text-center mb-4">
-                    <div class="service-item p-3 shadow-sm">
-                        <i class="fa-solid fa-code-fork fa-beat fa-3x"></i>
-                        <h3>Custom API Development</h3>
-                        <p>Build and integrate bespoke APIs to connect and enhance applications, facilitating seamless interactions between different software systems.</p>
-                        <a class="btn btn-outline-success" href="#portfolio">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!---   -----------PORTFOLIO----------      -->
-    <div id="portfolio" class="py-5">
-        <div class="container">
-            <h2 class="sub-title text-center mb-5" style="color: #228B22;">Portfolio</h2>
-            <div class="row g-4">
-                <!-- Portfolio Item 1: Stock Web App -->
-                <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm" style="background-image: url('/Resources/Images/Stocks.webp');">
-                        <div class="portfolio-layer p-3">
-                            <h3>Stock Trading</h3>
-                            <p>This full-stack application enables users to manage stock transactions, featuring real-time financial data integration and user authentication.</p>
-                            <a href="https://github.com/DevinLegend/Finance" target="_blank" class="btn btn-success" aria-label="Visit Devin's Finance Stock Web App">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Item 2: Bank Statement Importer App -->
-                <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm" style="background-image: url('/Resources/Images/bank\ statement.webp');">
-                        <div class="portfolio-layer p-3">
-                            <h3>Book Keeper</h3>
-                            <p>This full-stack web application streamlines bank statement processing with Flask and SQLite, enhancing efficiency of financial data entry.</p>
-                            <a href="https://github.com/DevinLegend/AutoBookKeeper" target="_blank" class="btn btn-success" aria-label="Visit Devin's Data Entry Finance App">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3: Spotify App -->
-                <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm" style="background-image: url('/Resources/Images/work-2.png');">
-                        <div class="portfolio-layer p-3">
-                            <h3>Spotify App</h3>
-                            <p>"Jammming" is a React app that uses a Spotify API to search the Spotify song list database, then add and save the song to your playlist.</p>
-                            <a href="https://devinlegend.github.io/JammmingApp/" target="_blank" class="btn btn-success" aria-label="Visit Devin's Jamming Application">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-success">Return to the top of the page</a>
-            </div>
-        </div>
-    </div>
-    
+    </main>
 
-                    <!-- Contact Information -->
-    <!-- Contact Information -->
-    <div id="contact" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mb-4 text-center">
-                    <h2 class="sub-title" style="color: #228B22;">Contact Me</h2>
-                    <p><i class="fa-solid fa-paper-plane"></i> devinsoto@gmail.com</p>
-                    <div class="social-icons mb-3">
-                        <a href="https://www.facebook.com/devin.soto.52/" target="_blank" class="btn btn-outline-success me-2" aria-label="Visit Devin's Facebook profile"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://twitter.com/DevinSoto" target="_blank" class="btn btn-outline-success me-2" aria-label="Visit Devin's Twitter profile"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://instagram.com/devin_soto/" target="_blank" class="btn btn-outline-success me-2" aria-label="Visit Devin's Instagram profile"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/devinsoto/" target="_blank" class="btn btn-outline-success" aria-label="Visit Devin's LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/DevinLegend" target="_blank" class="btn btn-outline-success" aria-label="Visit Devin's Github profile"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <a href="/Resources/Images/Resume FSE 4_23_24 no#.pdf" download class="btn btn-success">Download Resume</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="text-center py-4 bg-white">
-        <p class="copywrite text-muted">© Copyright 2024 Devin Soto. All rights reserved</p>
+    <footer class="hub__footer">
+        <p>&copy; 2026 Devin Soto</p>
     </footer>
 
-
     <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
