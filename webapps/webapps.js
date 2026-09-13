@@ -1,0 +1,72 @@
+/* ===== Web Apps Library — Search & Render ===== */
+
+// Apps catalog — add new apps here
+const APPS = [
+    {
+        id: 'trialguard',
+        name: 'TrialGuard',
+        description: 'Type the day your free trial ends. Get calendar reminders before they bill you.',
+        url: 'https://zippy-sand-pixel-bison.grok.me/'
+    },
+    {
+        id: 'flyerics',
+        name: 'FlyerICS',
+        description: 'Paste a flyer or photo. Get a calendar file with the events.',
+        url: 'https://cobalt-xenon-baker-brush.grok.me/'
+    }
+];
+
+// DOM elements
+const searchInput = document.getElementById('search-input');
+const appsGrid = document.getElementById('apps-grid');
+const emptyState = document.getElementById('empty-state');
+
+// Render app cards
+function renderApps(apps) {
+    if (apps.length === 0) {
+        appsGrid.style.display = 'none';
+        emptyState.style.display = 'flex';
+        return;
+    }
+
+    appsGrid.style.display = 'grid';
+    emptyState.style.display = 'none';
+
+    appsGrid.innerHTML = apps.map(app => `
+        <a href="${app.url}" target="_blank" rel="noopener" class="app-card" data-app-id="${app.id}">
+            <div class="app-card__header">
+                <h2 class="app-card__name">${app.name}</h2>
+                <span class="app-card__arrow">↗</span>
+            </div>
+            <p class="app-card__description">${app.description}</p>
+        </a>
+    `).join('');
+}
+
+// Filter apps based on search query
+function filterApps(query) {
+    const lowercaseQuery = query.toLowerCase().trim();
+    
+    if (!lowercaseQuery) {
+        return APPS;
+    }
+
+    return APPS.filter(app => {
+        const nameMatch = app.name.toLowerCase().includes(lowercaseQuery);
+        const descriptionMatch = app.description.toLowerCase().includes(lowercaseQuery);
+        return nameMatch || descriptionMatch;
+    });
+}
+
+// Handle search input
+function handleSearch() {
+    const query = searchInput.value;
+    const filteredApps = filterApps(query);
+    renderApps(filteredApps);
+}
+
+// Event listeners
+searchInput.addEventListener('input', handleSearch);
+
+// Initial render
+renderApps(APPS);
