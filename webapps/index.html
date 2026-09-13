@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Apps — Library of tools I've shipped. Built by Devin Soto.">
+    <title>Web Apps — Devin Soto</title>
+    <link rel="canonical" href="https://devinsoto.com/webapps/">
+    <meta property="og:title" content="Web Apps — Devin Soto">
+    <meta property="og:description" content="Library of web tools and apps I've shipped.">
+    <meta property="og:url" content="https://devinsoto.com/webapps/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@DevinSoto">
+    <meta name="twitter:title" content="Web Apps — Devin Soto">
+    <meta name="twitter:description" content="Library of web tools and apps I've shipped.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="webapps.css">
+</head>
+<body>
+
+    <main class="webapps-page">
+        <!-- Header -->
+        <header class="webapps-header">
+            <a href="/" class="back-link" aria-label="Back to home">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Back</span>
+            </a>
+            <div class="webapps-header__content">
+                <h1 class="webapps-header__title">Web Apps</h1>
+                <p class="webapps-header__subtitle">A growing library of tools I've shipped — utilities, experiments, and side projects that solve real problems.</p>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input 
+                type="search" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="Search apps by name or description..."
+                autocomplete="off"
+                aria-label="Search web apps"
+            >
+        </div>
+
+        <!-- Apps Grid -->
+        <div id="apps-grid" class="apps-grid">
+            <!-- Apps will be rendered here by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <p>No apps match your search.</p>
+        </div>
+    </main>
+
+    <footer class="webapps-footer">
+        <p>&copy; 2026 Devin Soto</p>
+    </footer>
+
+    <script src="webapps.js"></script>
+</body>
+</html>
