@@ -17,7 +17,7 @@ const APPS = [
     {
         id: 'returnwindow',
         name: 'ReturnWindow',
-        description: 'Log a purchase's return window, see days left, download reminders before it expires.',
+        description: "Log a purchase's return window, see days left, download reminders before it expires.",
         url: 'https://bamboo-bird-cosmic-fair.grok.me/'
     },
     {
