@@ -3,6 +3,24 @@
 // Apps catalog — add new apps here
 const APPS = [
     {
+        id: 'cliplink',
+        name: 'ClipLink',
+        description: 'Paste a YouTube URL. Get short vertical 9:16 clips with captions when possible.',
+        url: 'https://cliplink.grok.me/'
+    },
+    {
+        id: 'midnight-slice',
+        name: 'Midnight Slice',
+        description: 'Night city arcade racer — 3D chase cam, nitro, high score.',
+        url: 'https://midnight-slice.grok.me/'
+    },
+    {
+        id: 'returnwindow',
+        name: 'ReturnWindow',
+        description: 'Log a purchase's return window, see days left, download reminders before it expires.',
+        url: 'https://bamboo-bird-cosmic-fair.grok.me/'
+    },
+    {
         id: 'trialguard',
         name: 'TrialGuard',
         description: 'Type the day your free trial ends. Get calendar reminders before they bill you.',
