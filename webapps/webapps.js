@@ -31,6 +31,12 @@ const APPS = [
         name: 'FlyerICS',
         description: 'Paste a flyer or photo. Get a calendar file with the events.',
         url: 'https://cobalt-xenon-baker-brush.grok.me/'
+    },
+    {
+        id: 'approvepack',
+        name: 'ApprovePack',
+        description: 'Paste project + deliverable + amount, get a copyable approval-request email + printable Approved/Changes-requested checklist.',
+        url: 'https://acre-moon-horizon-bloom.grok.me/'
     }
 ];
 
