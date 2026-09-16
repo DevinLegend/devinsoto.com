@@ -5,7 +5,7 @@ const APPS = [
     {
         id: 'cliplink',
         name: 'ClipLink',
-        description: 'Paste a YouTube URL. Get short vertical 9:16 clips with captions when possible.',
+        description: 'Paste a YouTube URL. Get short vertical 9:16 clips with captions when possible. Pro $19/mo available.',
         url: 'https://cliplink.grok.me/'
     },
     {
@@ -23,7 +23,7 @@ const APPS = [
     {
         id: 'trialguard',
         name: 'TrialGuard',
-        description: 'Type the day your free trial ends. Get calendar reminders before they bill you.',
+        description: 'Type the day your free trial ends. Get calendar reminders before they bill you. Pro $9 available.',
         url: 'https://zippy-sand-pixel-bison.grok.me/'
     },
     {

@@ -54,6 +54,13 @@
     max-width: 600px;
 }
 
+.pricing-line {
+    font-size: 0.95rem;
+    color: var(--accent-webapps);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
 /* ===== Search Bar ===== */
 .search-container {
     position: relative;
