@@ -3,12 +3,6 @@
 // Apps catalog — add new apps here
 const APPS = [
     {
-        id: 'cliplink',
-        name: 'ClipLink',
-        description: 'Paste a YouTube URL. Get short vertical 9:16 clips with captions when possible. Pro $19/mo available.',
-        url: 'https://cliplink.grok.me/'
-    },
-    {
         id: 'midnight-slice',
         name: 'Midnight Slice',
         description: 'Night city arcade racer — 3D chase cam, nitro, high score.',
