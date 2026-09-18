@@ -6,7 +6,15 @@ const APPS = [
         id: 'midnight-slice',
         name: 'Midnight Slice',
         description: 'Night city arcade racer — 3D chase cam, nitro, high score.',
-        url: 'https://midnight-slice.grok.me/'
+        url: 'https://midnight-slice.grok.me/',
+        category: 'games'
+    },
+    {
+        id: 'ashwreath',
+        name: 'Ashwreath',
+        description: 'Survivors-like game — the dead orbit you; the wreath is your weapon and your life.',
+        url: 'https://ashwreathe.grok.me/',
+        category: 'games'
     },
     {
         id: 'returnwindow',
@@ -72,7 +80,8 @@ function filterApps(query) {
     return APPS.filter(app => {
         const nameMatch = app.name.toLowerCase().includes(lowercaseQuery);
         const descriptionMatch = app.description.toLowerCase().includes(lowercaseQuery);
-        return nameMatch || descriptionMatch;
+        const categoryMatch = app.category && app.category.toLowerCase().includes(lowercaseQuery);
+        return nameMatch || descriptionMatch || categoryMatch;
     });
 }
 
