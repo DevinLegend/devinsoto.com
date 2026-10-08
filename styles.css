@@ -243,7 +243,8 @@ body {
     animation: fadeUp 0.6s 0.3s ease-out both;
 }
 
-.hub__switcher .hub__links {
+.hub__switcher .hub__links,
+.hub__links.hub__agency {
     animation: none;
 }
 
