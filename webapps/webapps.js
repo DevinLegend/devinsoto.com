@@ -3,20 +3,6 @@
 // Apps catalog — add new apps here
 const APPS = [
     {
-        id: 'midnight-slice',
-        name: 'Midnight Slice',
-        description: 'Night city arcade racer — 3D chase cam, nitro, high score.',
-        url: 'https://midnight-slice.grok.me/',
-        category: 'games'
-    },
-    {
-        id: 'ashwreath',
-        name: 'Ashwreath',
-        description: 'Survivors-like game — the dead orbit you; the wreath is your weapon and your life.',
-        url: 'https://ashwreathe.grok.me/',
-        category: 'games'
-    },
-    {
         id: 'returnwindow',
         name: 'ReturnWindow',
         description: "Log a purchase's return window, see days left, download reminders before it expires.",

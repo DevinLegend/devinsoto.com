@@ -22,6 +22,8 @@
     --accent-rift: #ff4d8d;
     --accent-snake: #d6ff4a;
     --accent-ig: #ec4899;
+    --accent-slice: #f5c16c;
+    --accent-wreath: #d7b48a;
     --radius: 16px;
     --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -39,8 +41,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    justify-content: safe center;
+    justify-content: flex-start;
+}
+
+/* Center the column when it fits. Shrink away when it doesn't,
+   so the name stays at the top and the page can scroll to the footer. */
+body::before,
+body::after {
+    content: "";
+    flex: 1 1 0;
+    width: 100%;
+    min-height: 0;
 }
 
 /* ===== Hub Container ===== */
@@ -145,6 +156,16 @@ body {
     box-shadow: 0 8px 30px rgba(236, 72, 153, 0.15);
 }
 
+.link-card--slice:hover {
+    border-color: var(--accent-slice);
+    box-shadow: 0 8px 30px rgba(245, 193, 108, 0.15);
+}
+
+.link-card--wreath:hover {
+    border-color: var(--accent-wreath);
+    box-shadow: 0 8px 30px rgba(215, 180, 138, 0.15);
+}
+
 .link-card:focus-visible {
     outline: 2px solid var(--text);
     outline-offset: 3px;
@@ -200,6 +221,16 @@ body {
 .link-card--ig .link-card__icon {
     background: rgba(236, 72, 153, 0.12);
     color: var(--accent-ig);
+}
+
+.link-card--slice .link-card__icon {
+    background: rgba(245, 193, 108, 0.12);
+    color: var(--accent-slice);
+}
+
+.link-card--wreath .link-card__icon {
+    background: rgba(215, 180, 138, 0.12);
+    color: var(--accent-wreath);
 }
 
 /* Text */
