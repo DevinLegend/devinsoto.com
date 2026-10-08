@@ -19,6 +19,8 @@
     --accent-legend: #ff6b35;
     --accent-webapps: #00d4ff;
     --accent-ww: #a78bfa;
+    --accent-rift: #ff4d8d;
+    --accent-snake: #d6ff4a;
     --radius: 16px;
     --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -37,6 +39,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    justify-content: safe center;
 }
 
 /* ===== Hub Container ===== */
@@ -126,6 +129,21 @@ body {
     box-shadow: 0 8px 30px rgba(167, 139, 250, 0.15);
 }
 
+.link-card--rift:hover {
+    border-color: var(--accent-rift);
+    box-shadow: 0 8px 30px rgba(255, 77, 141, 0.15);
+}
+
+.link-card--snake:hover {
+    border-color: var(--accent-snake);
+    box-shadow: 0 8px 30px rgba(214, 255, 74, 0.15);
+}
+
+.link-card:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+}
+
 /* Icon */
 .link-card__icon {
     flex-shrink: 0;
@@ -163,6 +181,16 @@ body {
     color: var(--accent-ww);
 }
 
+.link-card--rift .link-card__icon {
+    background: rgba(255, 77, 141, 0.12);
+    color: var(--accent-rift);
+}
+
+.link-card--snake .link-card__icon {
+    background: rgba(214, 255, 74, 0.12);
+    color: var(--accent-snake);
+}
+
 /* Text */
 .link-card__text {
     display: flex;
@@ -193,6 +221,28 @@ body {
 .link-card:hover .link-card__arrow {
     transform: translateX(4px);
     color: var(--text);
+}
+
+/* ===== Games ===== */
+.hub__games {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: fadeUp 0.6s 0.45s ease-out both;
+}
+
+.hub__section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.hub__games .hub__links {
+    animation: none;
 }
 
 /* ===== Footer ===== */
