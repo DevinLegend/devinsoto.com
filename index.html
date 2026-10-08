@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devin Soto — Engineer, Builder, Creator. Find me on X, check out my app, play browser games, or visit my web agency.">
+    <meta name="description" content="Devin Soto — Engineer, Builder, Creator. iOS apps, web apps, browser games, and social links.">
     <title>Devin Soto</title>
     <link rel="canonical" href="https://devinsoto.com/">
     <meta property="og:title" content="Devin Soto">
-    <meta property="og:description" content="Engineer, Builder, Creator. Links to everything I'm working on, including browser games.">
+    <meta property="og:description" content="Engineer, Builder, Creator. iOS apps, web apps, browser games, and social links.">
     <meta property="og:url" content="https://devinsoto.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@DevinSoto">
     <meta name="twitter:title" content="Devin Soto">
-    <meta name="twitter:description" content="Engineer, Builder, Creator. Apps, browser games, and more.">
+    <meta name="twitter:description" content="Engineer, Builder, Creator. iOS apps, web apps, browser games, and social links.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.documentElement.classList.add("js");
+        (function () {
+            var allowed = { "ios-apps": 1, "web-apps": 1, "games": 1, "socials": 1 };
+            var id = (location.hash || "").replace(/^#/, "");
+            if (!allowed[id]) id = "ios-apps";
+            document.documentElement.setAttribute("data-panel", id);
+        })();
+    </script>
 </head>
 <body>
 
@@ -26,120 +35,148 @@
             <p class="hub__tagline">Engineer · Builder · Creator</p>
         </div>
 
-        <!-- Link cards -->
-        <div class="hub__links">
+        <div class="hub__switcher" data-tabs>
+            <nav class="hub__tablist" data-tablist aria-label="Sections">
+                <a class="hub__tab" data-tab="ios-apps" href="#ios-apps">iOS Apps</a>
+                <a class="hub__tab" data-tab="web-apps" href="#web-apps">Web Apps</a>
+                <a class="hub__tab" data-tab="games" href="#games">Games</a>
+                <a class="hub__tab" data-tab="socials" href="#socials">Socials</a>
+            </nav>
 
-            <!-- X / Twitter -->
-            <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="link-card link-card--x" aria-label="Follow Devin on X">
-                <div class="link-card__icon">
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </div>
-                <div class="link-card__text">
-                    <span class="link-card__title">Follow me on X</span>
-                    <span class="link-card__sub">@DevinSoto</span>
-                </div>
-                <span class="link-card__arrow">→</span>
-            </a>
+            <div class="hub__panels">
+                <section class="hub__panel" id="ios-apps" data-panel aria-labelledby="ios-apps-heading">
+                    <h2 class="hub__section-label" id="ios-apps-heading">iOS Apps</h2>
+                    <div class="hub__links">
+                        <a href="https://apps.apple.com/us/app/new-year-goals/id6756251661" target="_blank" rel="noopener" class="link-card link-card--app" aria-label="Download New Year Goals on the App Store">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">New Year Goals</span>
+                                <span class="link-card__sub">Download on the App Store (iOS only)</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
 
-            <!-- App Store — New Year Goals -->
-            <a href="https://apps.apple.com/us/app/new-year-goals/id6756251661" target="_blank" rel="noopener" class="link-card link-card--app" aria-label="Download New Year Goals on the App Store">
-                <div class="link-card__icon">
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
-                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                    </svg>
-                </div>
-                <div class="link-card__text">
-                    <span class="link-card__title">New Year Goals</span>
-                    <span class="link-card__sub">Download on the App Store (iOS only)</span>
-                </div>
-                <span class="link-card__arrow">→</span>
-            </a>
-
-            <!-- Content Legend App -->
-            <a href="https://apps.apple.com/us/app/content-legend/id6762329416" target="_blank" rel="noopener" class="link-card link-card--legend" aria-label="Download Content Legend on the App Store">
-                <div class="link-card__icon">
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-4.41 0-8-3.59-8-8V8.3l8-4.44 8 4.44V12c0 4.41-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
-                    </svg>
-                </div>
-                <div class="link-card__text">
-                    <span class="link-card__title">Content Legend</span>
-                    <span class="link-card__sub">AI for X · App Store (iOS)</span>
-                </div>
-                <span class="link-card__arrow">→</span>
-            </a>
-
-            <!-- Web Apps Library -->
-            <a href="/webapps/" class="link-card link-card--webapps" aria-label="Browse my web apps library">
-                <div class="link-card__icon">
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="2" y="3" width="20" height="14" rx="2"/>
-                        <line x1="8" y1="21" x2="16" y2="21"/>
-                        <line x1="12" y1="17" x2="12" y2="21"/>
-                    </svg>
-                </div>
-                <div class="link-card__text">
-                    <span class="link-card__title">Web Apps</span>
-                    <span class="link-card__sub">Library of tools I've shipped</span>
-                </div>
-                <span class="link-card__arrow">→</span>
-            </a>
-
-            <!-- WebsitesWW.com -->
-            <a href="https://websitesww.com" target="_blank" rel="noopener" class="link-card link-card--ww" aria-label="Visit WebsitesWW.com">
-                <div class="link-card__icon">
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M2 12h20"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
-                    </svg>
-                </div>
-                <div class="link-card__text">
-                    <span class="link-card__title">WebsitesWW.com</span>
-                    <span class="link-card__sub">Need a website? I build them.</span>
-                </div>
-                <span class="link-card__arrow">→</span>
-            </a>
-
-        </div>
-
-        <!-- Games -->
-        <section class="hub__games" aria-labelledby="games-heading">
-            <h2 id="games-heading" class="hub__section-label">Games</h2>
-            <div class="hub__links">
-
-                <a href="https://www.spawn.co/?box=@obeylegend/riftfall" target="_blank" rel="noopener" class="link-card link-card--rift" aria-label="Play Riftfall: Battle Royale in the browser">
-                    <div class="link-card__icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 3.2 18.8 12 12 20.8 5.2 12 12 3.2z"/>
-                            <path d="M12 8.2 15.2 12 12 15.8 8.8 12 12 8.2z"/>
-                        </svg>
+                        <a href="https://apps.apple.com/us/app/content-legend/id6762329416" target="_blank" rel="noopener" class="link-card link-card--legend" aria-label="Download Content Legend on the App Store">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-4.41 0-8-3.59-8-8V8.3l8-4.44 8 4.44V12c0 4.41-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Content Legend</span>
+                                <span class="link-card__sub">AI for X · App Store (iOS)</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
                     </div>
-                    <div class="link-card__text">
-                        <span class="link-card__title">Riftfall: Battle Royale</span>
-                        <span class="link-card__sub">Battle royale · play in browser</span>
-                    </div>
-                    <span class="link-card__arrow">→</span>
-                </a>
+                </section>
 
-                <a href="https://www.spawn.co/?box=@obeylegend/neon-snake" target="_blank" rel="noopener" class="link-card link-card--snake" aria-label="Play Neon Snake in the browser">
-                    <div class="link-card__icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M8 19c-2.8 0-4.5-1.8-4.5-4S5.2 11 8 11h7c2.5 0 4.5-1.7 4.5-4S17.5 3.5 15 3.5"/>
-                            <circle cx="15" cy="3.6" r="1.35" fill="currentColor" stroke="none"/>
-                        </svg>
-                    </div>
-                    <div class="link-card__text">
-                        <span class="link-card__title">Neon Snake</span>
-                        <span class="link-card__sub">3D snake · play in browser</span>
-                    </div>
-                    <span class="link-card__arrow">→</span>
-                </a>
+                <section class="hub__panel" id="web-apps" data-panel aria-labelledby="web-apps-heading">
+                    <h2 class="hub__section-label" id="web-apps-heading">Web Apps</h2>
+                    <div class="hub__links">
+                        <a href="/webapps/" class="link-card link-card--webapps" aria-label="Browse my web apps library">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Web Apps</span>
+                                <span class="link-card__sub">Library of tools I've shipped</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
 
+                        <a href="https://websitesww.com" target="_blank" rel="noopener" class="link-card link-card--ww" aria-label="Visit WebsitesWW.com">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M2 12h20"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">WebsitesWW.com</span>
+                                <span class="link-card__sub">Need a website? I build them.</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="hub__panel" id="games" data-panel aria-labelledby="games-heading">
+                    <h2 class="hub__section-label" id="games-heading">Games</h2>
+                    <div class="hub__links">
+                        <a href="https://www.spawn.co/?box=@obeylegend/neon-snake" target="_blank" rel="noopener" class="link-card link-card--snake" aria-label="Play Neon Snake in the browser">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M8 19c-2.8 0-4.5-1.8-4.5-4S5.2 11 8 11h7c2.5 0 4.5-1.7 4.5-4S17.5 3.5 15 3.5"/>
+                                    <circle cx="15" cy="3.6" r="1.35" fill="currentColor" stroke="none"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Neon Snake</span>
+                                <span class="link-card__sub">3D snake · play in browser</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
+
+                        <a href="https://www.spawn.co/?box=@obeylegend/riftfall" target="_blank" rel="noopener" class="link-card link-card--rift" aria-label="Play Riftfall: Battle Royale in the browser">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 3.2 18.8 12 12 20.8 5.2 12 12 3.2z"/>
+                                    <path d="M12 8.2 15.2 12 12 15.8 8.8 12 12 8.2z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Riftfall: Battle Royale</span>
+                                <span class="link-card__sub">Battle royale · play in browser</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="hub__panel" id="socials" data-panel aria-labelledby="socials-heading">
+                    <h2 class="hub__section-label" id="socials-heading">Socials</h2>
+                    <div class="hub__links">
+                        <a href="https://x.com/DevinSoto" target="_blank" rel="noopener" class="link-card link-card--x" aria-label="Follow Devin on X">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Follow me on X</span>
+                                <span class="link-card__sub">@DevinSoto</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
+
+                        <a href="https://instagram.com/devin_soto/" target="_blank" rel="noopener" class="link-card link-card--ig" aria-label="Follow Devin on Instagram">
+                            <div class="link-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="4" y="7" width="16" height="13" rx="2.5"/>
+                                    <circle cx="12" cy="13.5" r="3.1"/>
+                                    <path d="M9.2 7 10.2 4.5h3.6L14.8 7"/>
+                                </svg>
+                            </div>
+                            <div class="link-card__text">
+                                <span class="link-card__title">Instagram</span>
+                                <span class="link-card__sub">@devin_soto</span>
+                            </div>
+                            <span class="link-card__arrow">→</span>
+                        </a>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="hub__footer">
