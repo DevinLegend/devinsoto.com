@@ -24,6 +24,7 @@
     --accent-ig: #ec4899;
     --accent-slice: #f5c16c;
     --accent-wreath: #d7b48a;
+    --accent-spawn: #38bdf8;
     --radius: 16px;
     --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -166,6 +167,11 @@ body::after {
     box-shadow: 0 8px 30px rgba(215, 180, 138, 0.15);
 }
 
+.link-card--spawn:hover {
+    border-color: var(--accent-spawn);
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.15);
+}
+
 .link-card:focus-visible {
     outline: 2px solid var(--text);
     outline-offset: 3px;
@@ -231,6 +237,11 @@ body::after {
 .link-card--wreath .link-card__icon {
     background: rgba(215, 180, 138, 0.12);
     color: var(--accent-wreath);
+}
+
+.link-card--spawn .link-card__icon {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-spawn);
 }
 
 /* Text */
