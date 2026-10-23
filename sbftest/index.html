@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>South Bay Desk</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #0b1f18; color: #e8f2ec;
+    }
+    main {
+      width: min(420px, 92vw); padding: 2rem; border-radius: 16px;
+      background: #123028; border: 1px solid #1f463a;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+    h1 { margin: 0 0 .35rem; font-size: 1.55rem; }
+    p { margin: 0 0 1rem; line-height: 1.45; color: #b7cfc4; font-size: .95rem; }
+    .btn {
+      display: inline-block; width: 100%; box-sizing: border-box; text-align: center;
+      padding: .85rem 1rem; border-radius: 10px; font-weight: 600; text-decoration: none;
+      background: #3dd68c; color: #062015; margin-bottom: .65rem;
+    }
+    .btn.secondary { background: transparent; color: #9fd9bf; border: 1px solid #2a5a48; }
+    .btn[href="#"] { opacity: .55; pointer-events: none; }
+    .note { font-size: .8rem; color: #8eaea0; margin-top: .5rem; }
+    code { font-size: .78rem; color: #c9e6d7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>South Bay Desk</h1>
+    <p>Fence materials desk for South Bay. Private download page — not linked from the home site.</p>
+    <a id="win" class="btn" href="#">Download for Windows</a>
+    <a id="mac" class="btn secondary" href="#">Download for Mac</a>
+    <p class="note">Windows: unzip, then open <strong>South Bay Desk.exe</strong>. If SmartScreen appears, choose More info → Run anyway.</p>
+    <p class="note">Mac: unzip or open the app. First open: right-click → Open.</p>
+    <p class="note">Version: <code id="ver">…</code></p>
+  </main>
+  <script>
+    fetch('version.json', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((v) => {
+        document.getElementById('ver').textContent = v.version + (v.notes ? ' — ' + v.notes : '');
+        if (v.win && !String(v.win).includes('REPLACE_WITH_')) {
+          document.getElementById('win').href = v.win;
+        }
+        if (v.mac && !String(v.mac).includes('REPLACE_WITH_')) {
+          document.getElementById('mac').href = v.mac;
+        }
+      })
+      .catch(() => { document.getElementById('ver').textContent = 'unavailable'; });
+  </script>
+</body>
+</html>
