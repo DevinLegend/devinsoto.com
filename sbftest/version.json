@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "notes": "Easier Windows unzip: South Bay Desk.exe + appData folder. Prices stay on this computer.",
+  "version": "1.0.3",
+  "notes": "In-app Update button (green pill, top-right) appears on open when a newer build is published. Easy Windows unzip: South Bay Desk.exe + appData. Prices stay on this computer.",
   "win": "https://drive.google.com/uc?export=download&id=1LkQND0P2-amiQlVuNrztFZT7-mwWedmi",
   "mac": "https://drive.google.com/uc?export=download&id=1CeiYjaMyfPbt1IG168GCXMPdO3TyCrIQ"
 }
