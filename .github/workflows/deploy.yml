@@ -1,29 +1,17 @@
 name: Deploy to GitHub Pages
 
+# Retired. GitHub Pages publishes the personal hub from master
+# (.github/workflows/static.yml). A push to main must not upload this
+# resume site over https://devinsoto.com. Manual runs do not deploy either.
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  retired:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Do not deploy
+        run: echo "This workflow no longer deploys. The live site is published from master."
