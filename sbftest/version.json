@@ -1,0 +1,6 @@
+{
+  "version": "1.0.1",
+  "notes": "In-app updates. Prices stay on this computer.",
+  "win": "REPLACE_WITH_RELEASE_OR_DRIVE_WIN_URL",
+  "mac": "REPLACE_WITH_RELEASE_OR_DRIVE_MAC_URL"
+}
