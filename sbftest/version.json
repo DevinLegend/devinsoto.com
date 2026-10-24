@@ -1,6 +1,1 @@
-{
-  "version": "1.0.3",
-  "notes": "In-app Update button (green pill, top-right) appears on open when a newer build is published. Easy Windows unzip: South Bay Desk.exe + appData. Prices stay on this computer.",
-  "win": "https://drive.google.com/uc?export=download&id=1LkQND0P2-amiQlVuNrztFZT7-mwWedmi",
-  "mac": "https://drive.google.com/uc?export=download&id=1CeiYjaMyfPbt1IG168GCXMPdO3TyCrIQ"
-}
+{"version":"1.0.4","notes":"Test update: small version label (v1.0.4) in the bottom-left corner with a What's new line.","win":"https://e99gymkzmcsn8owa.public.blob.vercel-storage.com/south-bay-desk/1.0.4/0e558d273639d78a514a6ad2/SouthBayDesk-1.0.4-win.zip","mac":"https://e99gymkzmcsn8owa.public.blob.vercel-storage.com/south-bay-desk/1.0.4/0e558d273639d78a514a6ad2/SouthBayDesk-1.0.4-arm64-mac.zip"}
